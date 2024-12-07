@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int linearsearch(int arr[],int n,int num)
+{
+	for(int i=0;i<n;i++)
+	{
+		if(arr[i]==num)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+int main()
+{
+	int n;
+	cout<<"ENTER THE SIZE OF ARRAY: "<<endl;
+	cin>>n;
+	int arr[n];
+	cout<<"ENTER THE ELEMENTS OF ARRAY: "<<endl;
+	for(int i=0;i<n;i++)
+	{
+		cin>>arr[i];
+	}
+	int num;
+	cout<<"ENTER THE NUMBER TO BE FOUND USING LINEAR SEARCH: "<<endl;
+	cin>>num;
+	int idx=linearsearch( arr, n, num);
+	cout<<"THE INDEX OF ELEMENT'S FIRST OCCURENCE IS: "<<idx;
+}
