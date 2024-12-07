@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+int maxconsecutiveones(int arr[],int n)
+{
+	int cnt=0;
+	int maxi=0;
+	for(int i=0;i<n;i++)
+	{
+		if(arr[i]==1)
+		{
+			cnt++;
+			maxi=max(cnt,maxi);
+		}
+		else
+		{
+			cnt=0;
+		}
+	}
+	return maxi;
+}
+int main()
+{
+	int n;
+	cout<<"ENTER THE SIZE OF ARRAY: "<<endl;
+	cin>>n;
+	int arr[n];
+	cout<<"ENTER THE ELEMENTS OF ARRAY: "<<endl;
+	for(int i=0;i<n;i++)
+	{
+		cin>>arr[i];
+	}
+	int cons=maxconsecutiveones(arr, n);
+	cout<<"THE MAX NUMBER OF CONSECUTIVE ONE'S ARE: "<<cons;
+}
